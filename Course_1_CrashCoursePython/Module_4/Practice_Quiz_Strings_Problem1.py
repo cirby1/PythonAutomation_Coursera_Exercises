@@ -14,10 +14,15 @@ def is_palindrome(input_string):
             #If True, add the "letter" to the end of "new_string" and to the front of "reverse_string" If False (if a space is detected), no action is needed. Exit the if-block.
             new_string = new_string + single_character
             reverse_string = single_character + reverse_string
+        new_string = new_string.lower()
+        reverse_string = reverse_string.lower()
+        #print(new_string)
+        #print(reverse_string)
+        #print()
     #Complete the if-statement to compare the "new_string" to the "reverse_string". Remember that Python is case-sensitive when creating the string comaprison codde.
-    print(new_string)
-    print(reverse_string)
-    if new_string == reverse_string[::-1]:
+    #print(new_string)
+    #print(reverse_string)
+    if new_string == reverse_string:
 
             # If True, the "input_string" contains a palindrome.
             return True
@@ -25,10 +30,11 @@ def is_palindrome(input_string):
     #Otherwise, return False.
     return False
 
-print(is_palindrome("Never Odd or Even")) #Should be True
+print(is_palindrome("Never Odd or Even")) #Should be True.
+print(is_palindrome("abc")) #Should be False.
+print(is_palindrome("kayak"))
 
-
-
+#Okay, I was able to do it by lowering all the case of all the words for comparision. I think it wasn't working because it was comparing Upper case to Lower case letters.
 
 
 
