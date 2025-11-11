@@ -16,3 +16,7 @@ def counter(start, stop):
     return return_string
 
 print(counter(1, 10))
+print(counter(2, 1))
+print(counter(5, 5))
+
+#Left off on Number 6
