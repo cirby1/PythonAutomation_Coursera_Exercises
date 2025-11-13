@@ -5,6 +5,10 @@
 
 #Output the list with all of the ".hpp" files renamed to end with ".h". Leave the other filenames along. For this question, you must use a for loop to create the list. 
 
+#This program is wrong because it messed with all the other file types. I need to change it to where it only changes .hpp.
+
+
+"""
 def changefilenames():
     filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
     #Generate new_filenames as a list containing the new filenames using as many lines of code as your chosen method requires.
@@ -27,7 +31,7 @@ def changefilenames():
         else:
             return new_filenames
     return new_filenames
-
+"""
 
 print(changefilenames())
 

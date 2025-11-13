@@ -20,7 +20,8 @@ def changefilenamestoh(input_filenamelist):
 
 print(changefilenamestoh(filenames))
 
-            
+#The list comprehension way that I came up with was:
+#new_filenames = [individual_file[:-4] + ".h" if individual_file[-4:] == ".hpp" else individual_file for individual_file in filenames]
            
 
 
