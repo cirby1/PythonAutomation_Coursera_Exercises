@@ -116,6 +116,10 @@ List only:
 """
 
 #Here's another list example
+pet_list = ["bug", "fish", "bird"]
+print(pet_list[0:3])
+#Remember the counting starts at 0, so "bug" is 0, "fish" is 1, and "bird" is 2. The list will print all the elements from 0 or the starting element up to but not including the other number specified. So up to and not including is 2. So it will print 0 1 and 2. And since there's no element in spot 3, it just prints everything that is there. Which is kind of interesting. 
+
 
 
 
