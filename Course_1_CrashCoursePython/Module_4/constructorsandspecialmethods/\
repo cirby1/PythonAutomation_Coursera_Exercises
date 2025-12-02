@@ -1,0 +1,11 @@
+"""
+Skill 1: Using String methods.
+-Separate numerical values from text values in a string using .split().
+-Iterate over the elements in a string. 
+-Test if the element contains letters with .isalpha().
+-Assign the elements of the split string to new variables. 
+-Trim any extra white space using .strip(). 
+
+
+
+"""
