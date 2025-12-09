@@ -52,6 +52,18 @@ for GamerActivity in GamerActivities:
         ledger_of_gamers[GamerActivity.console].remove(GamerActivity.gamertag)
 print(ledger_of_gamers.items())
 
+def whosOn(input_ledger_of_gamers_here):
+    print("This report prints the gamers who are online right now!")
+    for console, players in input_ledger_of_gamers_here.items():
+        for player in players:
+            print(console + " " + player)
+
+
+
+
+
+whosOn(ledger_of_gamers)
+
 
 
 
