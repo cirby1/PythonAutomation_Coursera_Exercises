@@ -27,8 +27,9 @@ class GamerLog:
 GamerActivities = [
         GamerLog("12-09-2025 2:15", "Login", "N64", "Joe95"),
         GamerLog("12-09-2025 4:00", "Login", "Xbox", "Jack"),
-        GamerLog("12-10-2025 5:00", "Login", "Playstation", "SamEyeAm")
-        GamerLog("12-10-2025 5:00", "Login", "N64", "Cal")
+        GamerLog("12-10-2025 5:00", "Login", "Playstation", "SamEyeAm"),
+        GamerLog("12-10-2025 5:00", "Login", "N64", "Cal"),
+        #GamerLog("12-12-2025 6:00", "Logout", "Xbox", "Jack")
         ]
 
 def getGamerDate(input_Gamer_Log):
@@ -38,16 +39,16 @@ def getGamerDate(input_Gamer_Log):
 ledger_of_gamers = {}
 
 for GamerActivity in GamerActivities:
-    print(GamerActivity.gamertag)
-    print(GamerActivity.console)
+    #print(GamerActivity.gamertag)
+    #print(GamerActivity.console)
     if GamerActivity.console not in ledger_of_gamers:
         #This checks if the person's name is not in the tracker. 
         #This will create a blank slate If the gamer isn't in the tracker of gamers. 
         #Okayyyy, It's working after running and printing the items in the dictionary. Next part...
         ledger_of_gamers[GamerActivity.console] = set()
-    if GamerActivity.console in ledger_of_gamers:
+    if GamerActivity.console in ledger_of_gamers and GamerActivity.activity == "Login":
         ledger_of_gamers[GamerActivity.console].add(GamerActivity.gamertag)
-    elif GamerActivity.console not in ledger_of_gamers:
+    elif GamerActivity.gamertag not in ledger_of_gamers and GamerActivity.activity == "Logout":
         ledger_of_gamers[GamerActivity.console].remove(GamerActivity.gamertag)
 print(ledger_of_gamers.items())
 
