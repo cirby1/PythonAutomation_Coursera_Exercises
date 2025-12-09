@@ -76,6 +76,5 @@ def generate_report(machines):
 
 users = machinesUsed(events)
 print(users)
-
 generate_report(users)
 

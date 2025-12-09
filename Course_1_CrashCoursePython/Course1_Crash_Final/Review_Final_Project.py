@@ -15,5 +15,43 @@ But first I will need a task list of things to make. I need:
 
 """
 
+class GamerLog:
+    def __init__(self, timestamp, activity, console, gamertag):
+        self.self = self
+        self.timestamp = timestamp
+        self.activity = activity
+        self.console = console
+        self.gamertag = gamertag
+
+
+GamerActivities = [
+        GamerLog("12-09-2025 2:15", "Login", "N64", "Joe95"),
+        GamerLog("12-09-2025 4:00", "Login", "Xbox", "Jack"),
+        GamerLog("12-10-2025 5:00", "Login", "Playstation", "SamEyeAm")
+        GamerLog("12-10-2025 5:00", "Login", "N64", "Cal")
+        ]
+
+def getGamerDate(input_Gamer_Log):
+    return input_Gamer_Log.timestamp
+
+#This is the dictionary that keeps track of all the gamers. 
+ledger_of_gamers = {}
+
+for GamerActivity in GamerActivities:
+    print(GamerActivity.gamertag)
+    print(GamerActivity.console)
+    if GamerActivity.console not in ledger_of_gamers:
+        #This checks if the person's name is not in the tracker. 
+        #This will create a blank slate If the gamer isn't in the tracker of gamers. 
+        #Okayyyy, It's working after running and printing the items in the dictionary. Next part...
+        ledger_of_gamers[GamerActivity.console] = set()
+    if GamerActivity.console in ledger_of_gamers:
+        ledger_of_gamers[GamerActivity.console].add(GamerActivity.gamertag)
+    elif GamerActivity.console not in ledger_of_gamers:
+        ledger_of_gamers[GamerActivity.console].remove(GamerActivity.gamertag)
+print(ledger_of_gamers.items())
+
+
+
 
 
