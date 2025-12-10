@@ -1,0 +1,1 @@
+#Okay I spoke to the AI agent and completed it. There wasn't much to make note of or write down. The main subject was the difference between .sort() and .sorted(). Which I explained that .sort() returns nothing, while .sorted() returns a copy of the list. 
