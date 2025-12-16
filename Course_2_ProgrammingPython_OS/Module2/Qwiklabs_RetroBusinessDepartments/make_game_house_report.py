@@ -43,3 +43,23 @@ for individual_employee in worker_list:
         department_counter[department] += 1
 
 print(department_counter)
+print()
+print("OKAY, THE FINAL REPORT IS BELOW. YIPPPPEEEEEE\n")
+
+#Okay good! Now let's cycle through each element in the dictionary and print out the departments and numbers
+for individual_department, number in department_counter.items():
+    print(individual_department + " " + str(number))
+
+#Okay now that I'm able to print out the results. Let's write it out to an external file.
+with open("RetroRicksReport.txt", "w") as file:
+    for individual_department, number in department_counter.items():
+        file.write(individual_department + " " + str(number) + "\n")
+
+
+#And that's really it. I think I'm getting the hang of it. Let's seal the deal and put all of my work inside of functions now.
+#I'll need to make another file to do this and clean it up.
+
+
+
+
+
