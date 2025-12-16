@@ -1,4 +1,8 @@
 manager 3
+
 staff 2
+
 gamestocker 1
+
 ebayseller 1
+

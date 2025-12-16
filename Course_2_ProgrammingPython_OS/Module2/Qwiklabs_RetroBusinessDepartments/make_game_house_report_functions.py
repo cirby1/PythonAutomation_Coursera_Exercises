@@ -14,48 +14,49 @@ def create_work_dictionary(str_filepath):
 #Run the function create_work_dictionary below by uncommenting. It seems to work. And make sure you have the complete absolute path to a csv file of employee data. Our csv file was simple that just had fullname, username, and department.
 #print(create_work_dictionary("/home/calvinirby01/PythonAutomationExercises/Course_2_ProgrammingPython_OS/Module2/Qwiklabs_RetroBusinessDepartments/retrorickdepartments.csv"))
 
+def count_departments(dict_employee_departments):
+    #The input is a dictionary which has data about employees.
+    #The output is a dictionary that has a department and it's count. 
+    department_counter = {}
+
+    for individual_employee in dict_employee_departments:
+        department = individual_employee["department"]
+        if department in department_counter:
+            department_counter[department] += 1 
+        else:
+            department_counter[department] = 0  
+            department_counter[department] += 1
+    return department_counter
 
 
-"""
+#Okay the two lines below are needed to run. First you need to run the first function to get the employee worker list. And then you plug that into the next function which is above which is count departments. It all checks out and works.
+employee_departments = create_work_dictionary("/home/calvinirby01/PythonAutomationExercises/Course_2_ProgrammingPython_OS/Module2/Qwiklabs_RetroBusinessDepartments/retrorickdepartments.csv")
+department_counter = count_departments(employee_departments)
 
-    print() 
-    print()
-#Okay, now we need to process the data or count who's in what I guess. Well I know I'm counting by department right?  
 
-#Let me think, how can we cycle through a list... I guess with another for loop.
-department_counter = {}
-
-for individual_employee in worker_list:
-    print(individual_employee)
-    #Maybe this will print the entire row?
-    department = individual_employee["department"]
-    if department in department_counter:
-        print("Adding a increment to the department: " + str(individual_employee["department"]) + "\n")
-        department_counter[department] += 1 
-    else:
-        print("Made the department " + str(department))
-        department_counter[department] = 0  
-        print("Adding the increment to the department: " + str(department) + "\n")
-        department_counter[department] += 1
-
-print(department_counter)
-print()
-print("OKAY, THE FINAL REPORT IS BELOW. YIPPPPEEEEEE\n")
-
-#Okay good! Now let's cycle through each element in the dictionary and print out the departments and numbers
-for individual_department, number in department_counter.items():
-    print(individual_department + " " + str(number))
-
-#Okay now that I'm able to print out the results. Let's write it out to an external file.
-with open("RetroRicksReport.txt", "w") as file:
+def make_Report(str_department_counter):
+    #The input is the department list of counts from before.
+    #The output is a report file that is made into a text file.
+    print("The output for the report is: \n")
     for individual_department, number in department_counter.items():
-        file.write(individual_department + " " + str(number) + "\n")
+        print(individual_department + " " + str(number))
+
+    with open("RetroRicksReport.txt", "w") as file:
+        for individual_department, number in department_counter.items():
+            file.write(individual_department + " " + str(number) + "\n\n")
+    print()
+    print("Your data was saved into the external file successfully.")
 
 
-#And that's really it. I think I'm getting the hang of it. Let's seal the deal and put all of my work inside of functions now.
-#I'll need to make another file to do this and clean it up.
+make_Report(department_counter)
 
 
 
 
-"""
+
+
+
+
+
+
+
