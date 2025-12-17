@@ -1,3 +1,4 @@
+import re
 #Okay, so this is a log message and it's just a string. It's not very organized though. And kind of hard to read...
 log = "July 31 07:51:48 mycomputer bad_process[12345]: ERROR Performing package upgrade"
 
@@ -40,8 +41,8 @@ regex = r"\[(\d+)\]"
 
 #Okay, the next step is the actual action step. 
 
-#result = re.search(regex, log)
-
+result = re.search(regex, log)
+print(result)
 #result is just a variable that holds the answer and we are putting the answer into it with the = sign.
 
 #re.search
