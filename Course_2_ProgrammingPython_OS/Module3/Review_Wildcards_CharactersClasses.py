@@ -56,6 +56,58 @@
 #Like before this is going to match the string cloud with any alpha character (upper or lower) or numbers 1 through 9. 
 #It makes a match.
 
+#import re
+
+#print(re.search(r"[^a-zA-Z]", "This is a sentence with spaces."))
+
+#We first import regular expressions which is the package. To start. import re
+
+#re.search is the action and we need to plug in the regular expression and the place where we want to search.
+
+# r " " means Python ignore this and don't mess it up. Treat it as a raw string and then when we plug it in, Regular Expression will intepret it.
+
+#[ ] means to filter and it's more like select a range inbetween these things.
+
+#^ Means the front of the sentence. So search the first character at the front of the string?
+
+#a-zA-Z mean any lowercase or uppercase letter.
+
+#So this should technically get hit as "This" will match the capital T at the beginning.
+
+#Okay so ^ has TWO DIFFERENT MEANINGS. Inside the brackets it means NOT. Outside it means look at the beginning of the line.
+
+#So this means the first instance of anything that is not a letter. So it finds the first space character. 
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+#print(re.search(r"cat|dog", "I like cats."))
+
+#re.search is the action. Plug in the regular expression, and the thing you want to search.
+#r " " is the raw string. It tells Python to ignore and not interpret this. So that the text isn't messed up being sent into re.
+#cat|dog
+#| means or I think, let me look online.
+#Yes, I was right the | symbol means OR in regular expression.
+#This is basically saying look for the words cat or dog in the sentence.
+
+#-----------------------------------------------------------------------------------------------------------------------------
+
+#This example is interesting. It ONLY matches the first instance of which it finds a hit. Which is dog.
+#print(re.search(r"cat|dog", "I like both dogs and cats."))
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+#print(re.findall(r"cat|dog", "I like both dogs and cats."))
+#Okay so findall is really interesting. It just returns a list of all matches into a list. So in this case, dog and cat are put into a list. 
+
+
+#-----------------------------------------------------------------------------------------------------------------------------
+
+#Okay, I think I'm good now, lets go on to the next part...
+
+
+
+
+
 
 
 

@@ -34,6 +34,12 @@ regex = r"\[(\d+)\]"
 # + is like a greedy eater.
 #It means to keep collecting the same of that thing and putting them into a chunk. And it will stop once it reaches something which is not that thing. In our case it will stop collecting once it reaches a character that is not a number. Which is what d+ or digit+ means.
 
+# ^ has two separate functions. It usually means "look at the beginning" when it is outside of the brackets. Inside the brackets it means "NOT" so like [^a-z] means NOT a-z. 
+
+#* means zero or more. It will accept a match or it will not accept a match.
+
+#The + sign means a more stricter form of * it means one or more. Not one or more.
+
 # okay so a better way of looking at it is:     [       (    d+     )      ]
 #or better yet:                                 [ get all the numbers here ]
 #Or find as many digits in between the brackets. 
