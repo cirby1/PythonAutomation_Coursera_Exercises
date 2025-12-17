@@ -42,6 +42,10 @@ regex = r"\[(\d+)\]"
 
 #The ? sign means optional so optionally look for the character preceding it. So p? means optional p.
 
+#\w means any word sequence character and even underscores. It doesn't mean spaces or commas.
+#\d means any single digit.
+#\s means space.
+
 # okay so a better way of looking at it is:     [       (    d+     )      ]
 #or better yet:                                 [ get all the numbers here ]
 #Or find as many digits in between the brackets. 
