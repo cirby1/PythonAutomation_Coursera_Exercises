@@ -40,6 +40,8 @@ regex = r"\[(\d+)\]"
 
 #The + sign means a more stricter form of * it means one or more. Not one or more.
 
+#The ? sign means optional so optionally look for the character preceding it. So p? means optional p.
+
 # okay so a better way of looking at it is:     [       (    d+     )      ]
 #or better yet:                                 [ get all the numbers here ]
 #Or find as many digits in between the brackets. 
@@ -47,8 +49,8 @@ regex = r"\[(\d+)\]"
 
 #Okay, the next step is the actual action step. 
 
-result = re.search(regex, log)
-print(result)
+#result = re.search(regex, log)
+#print(result)
 #result is just a variable that holds the answer and we are putting the answer into it with the = sign.
 
 #re.search

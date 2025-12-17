@@ -27,9 +27,11 @@ import re
 #print(re.search(r"o+l+", "boil"))
 #This returns none. Since there is no repeating o's after the first o found. and there's no repeating l's after the first l found. 
 
+#import re
+#print(re.search(r"p?each", "To each their own"))
+#Here we find that it searches for p? as a optional character, If it doesn't find it, it still looks for each. Which is in fact in the string. So it just returns a match for each.
 
-
-
+#print(re.search(r"p?each", "I like peaches!"))
 
 
 
