@@ -17,4 +17,14 @@ print(re.search(pattern, "this isn't a valid variable name"))
 #Do it again. Match exactly one [a-zA-Z0-9_]
 
 #Okay in a bit let's break it down with AI in plain English.
-#Step 1: 
+#Step 1: Start of the String - ^ - Ensures the match begins with the very first character.
+
+#Step 2: The First Character - [a-zA-Z_] - So the first character can be an alphabetical character upper or lower, or an underscore. This ensures the first character of say a username isn't a number or some other obscure character.
+
+#Step 3: The following characters - [a-zA-Z0-9_] - So the following characters can be a through z upper or lower, numbers, or underscore. 
+
+#Step 4: * Means Zero or more for the preceding group. So it's gonna be a big clump of characters. 
+
+#Step 5: $ Means make sure it goes all the way to the end without trailing characters. It means the end of the input string. Or however long it is. 
+
+#So overall it means look for a clump of text. The first character is limited and the rest isn't so limited. It's more like a username finder. And it will only have underscores between words. 
