@@ -34,6 +34,7 @@ regex = r"\[(\d+)\]"
 # + is like a greedy eater.
 #It means to keep collecting the same of that thing and putting them into a chunk. And it will stop once it reaches something which is not that thing. In our case it will stop collecting once it reaches a character that is not a number. Which is what d+ or digit+ means.
 
+<<<<<<< Updated upstream
 # ^ has two separate functions. It usually means "look at the beginning" when it is outside of the brackets. Inside the brackets it means "NOT" so like [^a-z] means NOT a-z. 
 
 #* means zero or more. It will accept a match or it will not accept a match.
@@ -45,11 +46,16 @@ regex = r"\[(\d+)\]"
 #\w means any word sequence character and even underscores. It doesn't mean spaces or commas.
 #\d means any single digit.
 #\s means space.
+=======
+# .* means whatever or anything at all. 
+#This is good as a filler inbetween our searches if we are looking for specific things and then "whatever" or to ignore anything in between. For example, we can search for "aei" in a string by using the regex r"a.*e.*i" and this will search for a, then whatever, e, then whatever, and then i, then whatever. In order.
+>>>>>>> Stashed changes
 
 # okay so a better way of looking at it is:     [       (    d+     )      ]
 #or better yet:                                 [ get all the numbers here ]
 #Or find as many digits in between the brackets. 
 #And so this extracts that error message that we need between the brackets.
+#Another although bad example is searching for a sequence of letters. You can use r"a.e.i" to search for a string that has an "a", a random character, an "e", a random character, and an "i".
 
 #Okay, the next step is the actual action step. 
 
