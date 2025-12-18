@@ -1,0 +1,22 @@
+import re
+
+print(re.search(r"\w+\s\w+", "One Two"))
+print(re.search(r"\w*\s\w*", "123 Ready Set GO"))
+print(re.search(r"\w*\s\w*", "username user_01"))
+print(re.search(r"\w*\s\w*", "shopping_list: milk, bread, eggs."))
+
+#The text passed has to have at least 2 groups of alphanumeric characters (including letters, numbers, and underscores) separated by one or more whitespace characters.
+
+
+
+
+
+
+
+"""
+import re
+def check_character_groups(text):
+    result = re.search(r"", text)
+    return result != None
+print(check_character_groups("One")) #False
+"""
