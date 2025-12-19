@@ -8,8 +8,9 @@ import re
 def rearrange_name(name):
     result = re.search(r"([A-Z]\w*),\s([A-Z][\w\.\-]*)\s?([A-Z][\w\.\-]*)$", name)
     if result == None:
-
-name=rearrange_name("Kennedy, John F")
+        return name
+    return "{} {} {}".format(result[2], result[3], result[1])
+name=rearrange_name("Kennedy, John F.")
 print(name)
 
 
