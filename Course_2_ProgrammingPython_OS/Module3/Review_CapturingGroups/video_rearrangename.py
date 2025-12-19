@@ -3,6 +3,6 @@
 import re
 
 
-print(re.search(r"^([A-Z]\w*),\s([A-Z][\w\.\-]*)\s([A-Z][\w\.\-]*)$",  "Kennedy, John Franklin"))
+print(re.search(r"^([A-Z]\w*),\s([A-Z][\w\.\-]*)\s?([A-Z][\w\.\-]*)$",  "Kennedy, John-F."))
 
 
