@@ -1,5 +1,4 @@
-import re
-
+#import re
 
 #The .* here means whatever in between. So it is a hit with the full word.
 #print(re.search(r"Py.*n", "Pygmalion"))
