@@ -3,14 +3,14 @@
 import re
 
 def transform_record(record):
-    new_record = re.sub(r"(\d{3})-(\d{3})-?(\d{4})", r"+1-\1-\2-\3", record)
+    new_record = re.sub(r"(\d{3})-?(\d{3}+-?\d{4}+)", r"+1-\1-\2", record)
     return new_record
 
 
-#print(transform_record("Sabrina Green, 802-867-5309, IT whatever"))
-#print(transform_record("Juan Juano, 999-888-777, CS guy"))
+print(transform_record("Sabrina Green, 802-867-5309, IT whatever"))
+print(transform_record("Juan Juano, 999-888-777, CS guy"))
 print(transform_record("Peter Paker, 444-443-2232, Spiderman"))
-
+print(transform_record("Eli Jones,684-3481127,IT Specialist"))
 
 
 """
