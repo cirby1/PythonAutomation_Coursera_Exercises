@@ -10,9 +10,7 @@ Complete the find_isbn() function so that you can use it to extract the 6-digit 
 """
 import re
 
-result = re.search(r"(\d{3})-(\d)-(\d)-(\d{6})-(\d)", "The number is 333-4-5-777777-8")
-print(result.groups())
-print(result)
+result = re.search(r"^(\d{3})-(\d)-(\d{2})-(\d{6})-(\d)$", "333-4-55-777777-8")
 print(result.group(4))
 
 """
@@ -29,7 +27,7 @@ print(find_isbn("123-4-12-098754-0")) #Should return 098754
 """
 
 
-
+#Okay! I think I did it. I ran the tests on the website Problem code and it worked. Onto the next one....
 
 
 
